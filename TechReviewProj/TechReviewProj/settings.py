@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hnwu3&&ay28g$hukakhdwz(t4s@simf6gpc$z2o2m*6%s9ogop'
+SECRET_KEY = '=f*@4693f9$n_ulci6f4-5(n%a&g=vhrz^4-@&1g$2yf!$q*97'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'TechReviewApp',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'TechReviewProj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'techreviewdb',
+        'USER': 'postgres',
+        'PASSWORD': 'P@ssw0rd1',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
